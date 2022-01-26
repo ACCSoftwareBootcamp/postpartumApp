@@ -198,6 +198,7 @@ app.get('/username', (req, res) => {
     //form has a put route to /user to update
 });
 
+//Working on this and the save videos feature made me think that it might not be possible to implement this.
 app.put('/:username', (req, res) => {
     let username = req.params.username;
     let video = req.body.video;
@@ -211,11 +212,28 @@ app.put('/:username', (req, res) => {
                 console.log(success);
             }
         });
-
-
     console.log(`${username}, it worked!`)
 });
 
+// Adding my saved videos code in comment as 2 puts can't have same URL
+
+// app.put('/:username', (req, res) => {
+//     let username = req.params.username;
+//     let saveVideo = req.body.video;
+//     User.findOneAndUpdate(
+//         { username: username },
+//         { $push: { videosSaved: saveVideo } },
+//         function (error, success) {
+//             if (error) {
+//                 console.log(error);
+//                 res.status(400).json("Error updating document")
+//             } else {
+//                 console.log(success);
+//                 res.status(201).json(success)
+//             }
+//         });
+//     console.log(`${username}, it worked!`)
+// });
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
