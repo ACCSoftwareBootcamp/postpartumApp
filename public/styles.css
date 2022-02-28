@@ -5,11 +5,12 @@ html {
   border: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Lato', sans-serif;
 }
+
 #headerBg{
   background-color:#e0d6ff;
 }
+
 #backgroundHome {
   background: url("./assets/matthew-henry.jpg") center center no-repeat;
   width: 100%;
@@ -29,8 +30,10 @@ html {
   color: white;
 }
 
+
 /* Signup Form */
 #signup-container {
+
   background-image: url("./assets/zoltan-white-lotus.jpg");
   background-position: center;
   background-size: cover;
@@ -127,10 +130,37 @@ form{
 
 .message {
   width: 30vw;
+ 
   margin: 0 auto;
 }
 
+#signupForm {
+  width: 60vw;
+}
+/* 
+form{
+    width:40%;
+} */
+#ppdImage{
+  height:80vh;
+  width:40vw;
+}
+#ppaImage{
+  height:80vh;
+  width:40vw;
+}
+#ptsdImage{
+  height:80vh;
+  width:40vw;
+}
 
+
+#ppd_signs{
+  background-color:#F2E6E8;
+}
+#ptsd_signs{
+  background-color:#E3FFFC;
+}
 
 .hidden {
   display: none;
@@ -160,11 +190,18 @@ section {
 }
 
 
-#navbarLogo {
-  width: 20px;
-  height: 20px;
+.thumb {
+  max-height: 300px;
+  object-fit: cover;
 }
+
+.yelpcard {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  overflow: auto;
+  height: 300px;
 
 #footer{
   min-width:100vw;
+
 }
